@@ -2,8 +2,8 @@ function $(query) {
     return document.querySelector(query);
 }
 
-function _(query) {
-    return document.querySelectorAll(query);
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 // select RGB inputs
@@ -16,13 +16,12 @@ let redVal = $('#slider-red');
 let greenVal = $('#slider-green');
 let blueVal = $('#slider-blue');
 
-// select Color Display
-// let colorDisplay = $('#color-display');
-
 // select labels
 let redLbl = $('label[for=red]');
 let greenLbl = $('label[for=green]');
 let blueLbl = $('label[for=blue]');
+
+randomColor();
 
 // init display Colors
 displayColors();
@@ -38,6 +37,12 @@ changeRangeNumVal();
 
 // init Colors controls
 colorSliders();
+
+function randomColor() {
+    red.value = random(50, 255);
+    green.value = random(50, 255);
+    blue.value = random(50, 255);
+}
 
 // display colors
 function displayColors() {
@@ -70,7 +75,7 @@ function displayColors() {
 
     let el = $('[rel=icon]');
 
-    var parent = el.parentNode;
+    let parent = el.parentNode;
     if (parent) {
         parent.removeChild(el);
     }
