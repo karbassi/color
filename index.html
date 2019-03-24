@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Color Slider</title>
+    <link rel="icon">
+</head>
+<body>
+    <main>
+        <div class="color-slider-wrap">
+            <div class="sliders">
+                <div>
+                    <label for="red">Red</label>
+                    <input type="number" id="slider-red">
+                    <input value="100" type="range" min="0" max="255" id="red">
+                </div>
+                <div>
+                    <label for="green">Green</label>
+                    <input type="number" id="slider-green">
+                    <input value="150" type="range" min="0" max="255" id="green">
+                </div>
+                <div>
+                    <label for="blue">Blue</label>
+                    <input type="number" id="slider-blue">
+                    <input value="200" type="range" min="0" max="255" id="blue">
+                </div>
+                <p id="text"></p>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
