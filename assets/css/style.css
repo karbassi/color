@@ -1,3 +1,18 @@
+:root {
+    --dark-background-color: hsl(240, 5%, 17%);
+    --dark-link-primary-color: hsl(210, 100%, 64%);
+    --dark-link-secondary-color: hsl(177, 45%, 53%);
+    --dark-text-primary-color: hsl(240, 9%, 98%);
+    --dark-text-secondary-color: hsla(240, 9%, 98%, 0.8);
+    --dark-text-conditional-color: hsl(240, 9%, 98%);
+    --light-background-color: hsl(240, 9%, 98%);
+    --light-link-primary-color: hsl(214, 100%, 44%);
+    --light-link-secondary-color: hsl(188, 100%, 32%);
+    --light-text-primary-color: hsl(240, 4%, 5%);
+    --light-text-secondary-color: hsl(0, 0%, 45%);
+    --light-text-conditional-color: hsl(240, 3%, 30%);
+}
+
 body,
 html {
     height: 100%;
@@ -14,6 +29,24 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.btn-settings {
+    -moz-context-properties: fill;
+    background-size: 16px;
+    background: transparent url("../img/settings.svg") center no-repeat;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    /* fill: var(--light-text-primary-color); */
+    height: 16px;
+    inset-inline-end: 15px;
+    padding: 15px;
+    position: fixed;
+    top: 15px;
+    vertical-align: middle;
+    width: 16px;
+    z-index: 1000;
+}
+
 header {
     margin-bottom: 10px;
 }
@@ -25,6 +58,7 @@ h1 {
 }
 
 /* RGB title */
+
 span:nth-child(1) {
     color: #ff0000;
 }
@@ -57,6 +91,7 @@ label {
 }
 
 /* number input */
+
 .sliders input[type=number] {
     text-align: center;
     width: 50px;
@@ -89,6 +124,7 @@ label {
 }
 
 /* range sliders */
+
 .sliders input[type=range] {
     height: 8px;
     border-radius: 10px;
@@ -104,6 +140,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 /* slider thumb */
+
 .sliders input[type=range]::-webkit-slider-thumb {
     height: 20px;
     width: 24px;

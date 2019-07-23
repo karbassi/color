@@ -44,10 +44,15 @@ function randomColor() {
     blue.value = random(50, 255);
 }
 
+function rgbToHex(r, g, b) {
+    return "#" + ((1 << 24) + ((+r) << 16) + ((+g) << 8) + (+b)).toString(16).slice(1);
+}
+
 // display colors
 function displayColors() {
     let rgb = `rgb(${red.value}, ${green.value}, ${blue.value})`;
-
+    let hex = rgbToHex(red.value, green.value, blue.value);
+    
     // Set background color
     $('body').style.backgroundColor = rgb;
 
@@ -55,7 +60,7 @@ function displayColors() {
     document.title = rgb;
 
     // Set text
-    $('#text').innerText = rgb;
+    $('#text').innerText = hex;
 
     // Set Favicon
     let size = 1;
